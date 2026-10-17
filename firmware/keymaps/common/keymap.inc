@@ -1,5 +1,22 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+/*
+ *
+ * +-------+-------+-------+-------+
+ * |  ENC  |  SW1  |  SW2  |  SW3  |
+ * | press |  F13  |  F14  |  F15  |
+ * +-------+-------+-------+-------+
+ * |  SW4  |  SW5  |  SW6  |  SW7  |
+ * |  F16  |  F17  |  F18  |  F19  |
+ * +-------+-------+-------+-------+
+ * |  SW8  |  SW9  | SW10  | SW11  |
+ * |  F20  |  F21  |  F22  |  F23  |
+ * +-------+-------+-------+-------+
+ *
+ * Encoder turn: CCW = volume down, CW = volume up.
+ * Hold its press switch to use the RGB-control layer.
+ */
+
 #include QMK_KEYBOARD_H
 
 enum layer_names {
