@@ -1,0 +1,89 @@
+{
+    "keyboard_name": "Arcpad",
+    "manufacturer": "jorm",
+    "maintainer": "jorm",
+    "url": "https://github.com/jormy/arcpad/",
+    "usb": {
+        "vid": "0xFEED",
+        "pid": "0x6060",
+        "device_version": "0.1.0"
+    },
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "build": {
+        "lto": true
+    },
+    "features": {
+        "bootmagic": true,
+        "encoder": true,
+        "extrakey": true,
+        "mousekey": false,
+        "nkro": true,
+        "rgb_matrix": true
+    },
+    "diode_direction": "COL2ROW",
+    "matrix_pins": {
+        "rows": ["GP26", "GP27", "GP28", "GP1"],
+        "cols": ["GP29", "GP6", "GP7", "GP0"]
+    },
+    "encoder": {
+        "rotary": [{ "pin_a": "GP2", "pin_b": "GP4" }]
+    },
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP3"
+    },
+    "rgb_matrix": {
+        "driver": "ws2812",
+        "max_brightness": 128,
+        "sleep": true,
+        "default": {
+            "animation": "solid_reactive_simple",
+            "hue": 170,
+            "val": 96
+        },
+        "animations": {
+            "solid_color": true,
+            "breathing": true,
+            "cycle_left_right": true,
+            "solid_reactive_simple": true,
+            "typing_heatmap": true
+        },
+        "layout": [
+            { "x": 224, "y": 0, "flags": 8 },
+            { "x": 224, "y": 16, "flags": 8 },
+            { "x": 224, "y": 32, "flags": 8 },
+            { "x": 224, "y": 48, "flags": 8 },
+            { "x": 224, "y": 64, "flags": 8 },
+            { "matrix": [2, 3], "x": 168, "y": 64, "flags": 4 },
+            { "matrix": [2, 2], "x": 112, "y": 64, "flags": 4 },
+            { "matrix": [2, 1], "x": 56, "y": 64, "flags": 4 },
+            { "matrix": [2, 0], "x": 0, "y": 64, "flags": 4 },
+            { "matrix": [1, 0], "x": 0, "y": 32, "flags": 4 },
+            { "matrix": [1, 1], "x": 56, "y": 32, "flags": 4 },
+            { "matrix": [1, 2], "x": 112, "y": 32, "flags": 4 },
+            { "matrix": [1, 3], "x": 168, "y": 32, "flags": 4 },
+            { "matrix": [0, 3], "x": 168, "y": 0, "flags": 4 },
+            { "matrix": [0, 2], "x": 112, "y": 0, "flags": 4 },
+            { "matrix": [0, 1], "x": 56, "y": 0, "flags": 4 }
+        ]
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                { "label": "Encoder press", "matrix": [3, 0], "x": 0, "y": 0 },
+                { "label": "SW1", "matrix": [0, 1], "x": 1, "y": 0 },
+                { "label": "SW2", "matrix": [0, 2], "x": 2, "y": 0 },
+                { "label": "SW3", "matrix": [0, 3], "x": 3, "y": 0 },
+                { "label": "SW4", "matrix": [1, 0], "x": 0, "y": 1 },
+                { "label": "SW5", "matrix": [1, 1], "x": 1, "y": 1 },
+                { "label": "SW6", "matrix": [1, 2], "x": 2, "y": 1 },
+                { "label": "SW7", "matrix": [1, 3], "x": 3, "y": 1 },
+                { "label": "SW8", "matrix": [2, 0], "x": 0, "y": 2 },
+                { "label": "SW9", "matrix": [2, 1], "x": 1, "y": 2 },
+                { "label": "SW10", "matrix": [2, 2], "x": 2, "y": 2 },
+                { "label": "SW11", "matrix": [2, 3], "x": 3, "y": 2 }
+            ]
+        }
+    }
+}
