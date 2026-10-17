@@ -2,13 +2,13 @@
     "name": "Arcpad",
     "vendorId": "0xFEED",
     "productId": "0x6060",
-    "matrix": {"rows": 4, "cols": 4},
+    "matrix": {"rows": 3, "cols": 4},
     "keycodes": ["qmk_rgb_matrix_keycodes"],
     "menus": ["qmk_rgb_matrix"],
     "layouts": {
         "keymap": [
             [
-                "3,0\n\n\n\n\n\n\n\n\ne0",
+                "0,0\n\n\n\n\n\n\n\n\ne0",
                 "0,1",
                 "0,2",
                 "0,3"
